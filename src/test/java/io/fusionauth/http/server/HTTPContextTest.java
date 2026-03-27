@@ -217,8 +217,7 @@ public class HTTPContextTest {
   @Test
   public void testNonExistentFileReturnsNull() {
     URL result = context.getResource("does-not-exist.txt");
-    // This might return null or try classpath lookup, either is acceptable
-    // The key is it doesn't throw an exception or allow traversal
+    assertNull(result);
   }
 
   /**
