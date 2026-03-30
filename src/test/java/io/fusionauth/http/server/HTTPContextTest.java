@@ -17,8 +17,6 @@ package io.fusionauth.http.server;
 
 import java.io.IOException;
 import java.net.URL;
-import java.net.URLEncoder;
-import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
@@ -89,7 +87,7 @@ public class HTTPContextTest {
    * Test that legitimate file paths work correctly.
    */
   @Test
-  public void testLegitimatePathsSucceed() throws Exception {
+  public void testLegitimatePathsSucceed() {
     // Test root level file
     URL indexUrl = context.getResource("index.html");
     assertNotNull(indexUrl, "Should resolve index.html");
